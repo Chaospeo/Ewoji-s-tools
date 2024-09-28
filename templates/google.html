@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/bootstrap/css/bootstrap.css')}}">
+    <script src="{{url_for('static',filename='/bootstrapcss/bootstrap.js')}}"></script>
+    <title>Bootstrap-learn</title>
+</head>
+ 
+<body>
+    <div class="container-fluid p-3 bg-dark text-white">
+        <h2><a>谷歌搜索语法生成器</a></h2>
+    </div>
+    <br>
+
+    <form method="post" action="">
+        <div class="mb-3">
+             <label for="formGroupExampleInput" class="form-label">主域名</label>
+             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="eg:xxx.edu.cn" name="site">
+        </div>
+        <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">文件类型</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg:xls xlsx doc pdf" name="filetype">
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">URL中的关键字</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg:login admin" name="inurl">
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">标题中的关键字</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg:后台 系统 认证 管理" name="intitle">
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">正文中的关键字</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="eg:身份证 学号 公示 贫困 三好 优秀" name="intext">
+        </div>
+        <button type="submit" class="btn btn-dark">生成</button>
+    </form>
+
+        <br>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                 <p>{{output}}</p>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="window.location.href='/'" type="button" class="btn btn-dark">回首页</button>
+
+
+</body>
+ 
+</html>
